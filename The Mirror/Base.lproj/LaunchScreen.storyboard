@@ -22,15 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Mirror" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXw-oh-3uY">
-                                <rect key="frame" x="81" y="318" width="212" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Mirror" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXw-oh-3uY">
+                                <rect key="frame" x="134" y="319" width="107" height="30"/>
                                 <fontDescription key="fontDescription" name="Cormorant-Bold" family="Cormorant" pointSize="24"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.16470588235294117" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXw-oh-3uY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PRq-yg-DB6"/>
+                            <constraint firstItem="bXw-oh-3uY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Sf4-cW-gbk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

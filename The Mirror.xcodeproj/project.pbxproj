@@ -17,6 +17,11 @@
 		CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */; };
 		CA981F7A21B51EB00008A3E4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */; };
 		CA981F7B21B523340008A3E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC521B4896C00C25947 /* Main.storyboard */; };
+		CACC737821B53D590057F57B /* InspirationalQuotesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737721B53D590057F57B /* InspirationalQuotesData.swift */; };
+		CACC737A21B5488D0057F57B /* InspirationalQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737921B5488D0057F57B /* InspirationalQuoteViewController.swift */; };
+		CACC737C21B557D70057F57B /* MirrorUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737B21B557D70057F57B /* MirrorUser.swift */; };
+		CACC737E21B55FBD0057F57B /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737D21B55FBD0057F57B /* StartUpViewController.swift */; };
+		CACC738021B56AF60057F57B /* StartPage1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737F21B56AF60057F57B /* StartPage1VC.swift */; };
 		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 		CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 		CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CA981F7C21B5246C0008A3E4 /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
+		CACC737721B53D590057F57B /* InspirationalQuotesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationalQuotesData.swift; sourceTree = "<group>"; };
+		CACC737921B5488D0057F57B /* InspirationalQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationalQuoteViewController.swift; sourceTree = "<group>"; };
+		CACC737B21B557D70057F57B /* MirrorUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorUser.swift; sourceTree = "<group>"; };
+		CACC737D21B55FBD0057F57B /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
+		CACC737F21B56AF60057F57B /* StartPage1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage1VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +100,15 @@
 			isa = PBXGroup;
 			children = (
 				CA3A7CC121B4896C00C25947 /* AppDelegate.swift */,
+				CACC737721B53D590057F57B /* InspirationalQuotesData.swift */,
+				CACC737B21B557D70057F57B /* MirrorUser.swift */,
 				CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */,
 				CA3A7CC321B4896C00C25947 /* ViewController.swift */,
 				CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */,
 				CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */,
+				CACC737921B5488D0057F57B /* InspirationalQuoteViewController.swift */,
+				CACC737D21B55FBD0057F57B /* StartUpViewController.swift */,
+				CACC737F21B56AF60057F57B /* StartPage1VC.swift */,
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
@@ -221,6 +236,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
@@ -233,6 +249,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -244,6 +261,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
@@ -256,6 +274,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -299,6 +318,11 @@
 				CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */,
 				CA3A7CC421B4896C00C25947 /* ViewController.swift in Sources */,
 				CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */,
+				CACC737E21B55FBD0057F57B /* StartUpViewController.swift in Sources */,
+				CACC737A21B5488D0057F57B /* InspirationalQuoteViewController.swift in Sources */,
+				CACC737C21B557D70057F57B /* MirrorUser.swift in Sources */,
+				CACC737821B53D590057F57B /* InspirationalQuotesData.swift in Sources */,
+				CACC738021B56AF60057F57B /* StartPage1VC.swift in Sources */,
 				CA3A7CC221B4896C00C25947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

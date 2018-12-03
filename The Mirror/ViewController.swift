@@ -18,15 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var homeTabBarButton: UITabBarItem!
     
     var authUI: FUIAuth!
+    var user: MirrorUser!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         
-//        self.view.backgroundColor = UIColor(displayP3Red: 240, green: 235, blue: 224, alpha: 1)
-//        self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 240, green: 235, blue: 224, alpha: 1)
-//        self.navigationController?.navigationBar.isTranslucent = true
+        
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -55,6 +54,9 @@ class ViewController: UIViewController {
         if currentUser == nil {
             self.authUI?.providers = providers
             present(authUI.authViewController(), animated: true, completion: nil)
+        } else {
+            user = MirrorUser(user: currentUser!)
+            user.isNewUser()
         }
     }
 
