@@ -138,20 +138,53 @@
             </objects>
             <point key="canvasLocation" x="296.80000000000001" y="-1254.4227886056972"/>
         </scene>
-        <!--View Controller-->
+        <!--Your NameVC-->
         <scene sceneID="4YR-2a-MqJ">
             <objects>
-                <viewController storyboardIdentifier="Start Page 5" id="obU-GT-LlJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Start Page 5" id="obU-GT-LlJ" customClass="YourNameVC" customModule="The_Mirror" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Start Page 5" id="aFD-uQ-M1Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's Your Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-AL-uri">
+                                <rect key="frame" x="64" y="82" width="246" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="NAME" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-r9-6kM">
+                                <rect key="frame" x="64" y="158" width="246" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07h-5j-ud3">
+                                <rect key="frame" x="161" y="578" width="57" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackHome:" destination="obU-GT-LlJ" eventType="touchUpInside" id="CQY-bm-wbc"/>
+                                    <segue destination="LID-0A-unL" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSeque:" id="y76-J8-Qml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="fhG-Ds-oJg"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="8m1-r9-6kM" id="LoD-pG-sdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cri-CP-N5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LID-0A-unL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="-1944"/>
+            <point key="canvasLocation" x="1080.8" y="-1944.3778110944529"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="atI-b4-nES">
@@ -288,7 +321,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi James!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urh-2O-ZTa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urh-2O-ZTa">
                                 <rect key="frame" x="131" y="25" width="113" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="30"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -485,6 +518,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameLabel" destination="urh-2O-ZTa" id="gZN-WD-FfA"/>
                         <outlet property="navigationBar" destination="dq3-wj-eiZ" id="XTg-0t-Jbp"/>
                         <outlet property="settingsBarButton" destination="jsv-ZT-HCN" id="Eb9-7D-ug0"/>
                         <outlet property="statisticsBarButton" destination="Axo-lw-Zt1" id="0Ib-Xb-GLm"/>

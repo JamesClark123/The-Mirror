@@ -22,6 +22,7 @@
 		CACC737C21B557D70057F57B /* MirrorUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737B21B557D70057F57B /* MirrorUser.swift */; };
 		CACC737E21B55FBD0057F57B /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737D21B55FBD0057F57B /* StartUpViewController.swift */; };
 		CACC738021B56AF60057F57B /* StartPage1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737F21B56AF60057F57B /* StartPage1VC.swift */; };
+		CACC738221B577C60057F57B /* YourNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC738121B577C60057F57B /* YourNameVC.swift */; };
 		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		CACC737B21B557D70057F57B /* MirrorUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorUser.swift; sourceTree = "<group>"; };
 		CACC737D21B55FBD0057F57B /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		CACC737F21B56AF60057F57B /* StartPage1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage1VC.swift; sourceTree = "<group>"; };
+		CACC738121B577C60057F57B /* YourNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourNameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CACC737921B5488D0057F57B /* InspirationalQuoteViewController.swift */,
 				CACC737D21B55FBD0057F57B /* StartUpViewController.swift */,
 				CACC737F21B56AF60057F57B /* StartPage1VC.swift */,
+				CACC738121B577C60057F57B /* YourNameVC.swift */,
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
@@ -322,6 +325,7 @@
 				CACC737A21B5488D0057F57B /* InspirationalQuoteViewController.swift in Sources */,
 				CACC737C21B557D70057F57B /* MirrorUser.swift in Sources */,
 				CACC737821B53D590057F57B /* InspirationalQuotesData.swift in Sources */,
+				CACC738221B577C60057F57B /* YourNameVC.swift in Sources */,
 				CACC738021B56AF60057F57B /* StartPage1VC.swift in Sources */,
 				CA3A7CC221B4896C00C25947 /* AppDelegate.swift in Sources */,
 			);

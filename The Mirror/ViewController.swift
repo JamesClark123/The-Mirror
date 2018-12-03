@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var statisticsBarButton: UIBarButtonItem!
     @IBOutlet weak var settingsBarButton: UIBarButtonItem!
     @IBOutlet weak var homeTabBarButton: UITabBarItem!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var authUI: FUIAuth!
     var user: MirrorUser!
@@ -57,6 +58,16 @@ class ViewController: UIViewController {
         } else {
             user = MirrorUser(user: currentUser!)
             user.isNewUser()
+        }
+    }
+    
+    @IBAction func unwindToHome(seque: UIStoryboardSegue) {
+        
+        if seque.source is YourNameVC {
+            if let senderVC = seque.source as? YourNameVC {
+                user.realName = senderVC.newName
+                nameLabel.text = "Hi " + senderVC.newName + "!"
+            }
         }
     }
 

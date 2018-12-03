@@ -22,6 +22,8 @@ class StartUpViewController: UIPageViewController {
         
         dataSource = self
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
