@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		CA3A7CC221B4896C00C25947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A7CC121B4896C00C25947 /* AppDelegate.swift */; };
 		CA3A7CC421B4896C00C25947 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A7CC321B4896C00C25947 /* ViewController.swift */; };
-		CA3A7CC721B4896C00C25947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC521B4896C00C25947 /* Main.storyboard */; };
 		CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC821B4896D00C25947 /* Assets.xcassets */; };
 		CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */; };
 		CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */; };
 		CA981F7221B4C5A00008A3E4 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CA981F7121B4C5A00008A3E4 /* fonts */; };
 		CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */; };
 		CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */; };
+		CA981F7A21B51EB00008A3E4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */; };
+		CA981F7B21B523340008A3E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC521B4896C00C25947 /* Main.storyboard */; };
 		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		CA981F7121B4C5A00008A3E4 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
+		CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CA981F7C21B5246C0008A3E4 /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +93,13 @@
 				CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */,
 				CA3A7CC321B4896C00C25947 /* ViewController.swift */,
 				CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */,
+				CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */,
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
 				CA3A7CCD21B4896D00C25947 /* Info.plist */,
 				CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */,
+				CA981F7C21B5246C0008A3E4 /* Objc-Bridge-Header.h */,
 				CA981F7121B4C5A00008A3E4 /* fonts */,
 			);
 			path = "The Mirror";
@@ -167,9 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA981F7221B4C5A00008A3E4 /* fonts in Resources */,
+				CA981F7B21B523340008A3E4 /* Main.storyboard in Resources */,
 				CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */,
 				CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */,
-				CA3A7CC721B4896C00C25947 /* Main.storyboard in Resources */,
 				CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA981F7A21B51EB00008A3E4 /* CalendarViewController.swift in Sources */,
 				CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */,
 				CA3A7CC421B4896C00C25947 /* ViewController.swift in Sources */,
 				CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */,
@@ -444,7 +450,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AH5RVS57R;
 				INFOPLIST_FILE = "The Mirror/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.James.The-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -461,7 +470,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AH5RVS57R;
 				INFOPLIST_FILE = "The Mirror/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.James.The-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
