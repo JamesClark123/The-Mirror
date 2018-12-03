@@ -12,9 +12,16 @@
 		CA3A7CC721B4896C00C25947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC521B4896C00C25947 /* Main.storyboard */; };
 		CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC821B4896D00C25947 /* Assets.xcassets */; };
 		CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */; };
+		CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */; };
+		CA981F7221B4C5A00008A3E4 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CA981F7121B4C5A00008A3E4 /* fonts */; };
+		CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */; };
+		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55860BA3179714E0FB1AC013 /* Pods-The Mirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Mirror.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror.release.xcconfig"; sourceTree = "<group>"; };
+		78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Mirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F2CD6E1A266565B67AD5F4 /* Pods-The Mirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Mirror.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3A7CBE21B4896C00C25947 /* The Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A7CC121B4896C00C25947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A7CC321B4896C00C25947 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		CA3A7CC821B4896D00C25947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA3A7CCB21B4896D00C25947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3A7CCD21B4896D00C25947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA981F7121B4C5A00008A3E4 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11541E0827B0F73476A5DF84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0F2CD6E1A266565B67AD5F4 /* Pods-The Mirror.debug.xcconfig */,
+				55860BA3179714E0FB1AC013 /* Pods-The Mirror.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F7F59BC755925A986C9A590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA3A7CB521B4896B00C25947 = {
 			isa = PBXGroup;
 			children = (
 				CA3A7CC021B4896C00C25947 /* The Mirror */,
 				CA3A7CBF21B4896C00C25947 /* Products */,
+				11541E0827B0F73476A5DF84 /* Pods */,
+				5F7F59BC755925A986C9A590 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				CA3A7CC121B4896C00C25947 /* AppDelegate.swift */,
+				CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */,
 				CA3A7CC321B4896C00C25947 /* ViewController.swift */,
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
 				CA3A7CCD21B4896D00C25947 /* Info.plist */,
+				CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */,
+				CA981F7121B4C5A00008A3E4 /* fonts */,
 			);
 			path = "The Mirror";
 			sourceTree = "<group>";
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA3A7CD021B4896D00C25947 /* Build configuration list for PBXNativeTarget "The Mirror" */;
 			buildPhases = (
+				3ABDDC833528391885DB2691 /* [CP] Check Pods Manifest.lock */,
 				CA3A7CBA21B4896C00C25947 /* Sources */,
 				CA3A7CBB21B4896C00C25947 /* Frameworks */,
 				CA3A7CBC21B4896C00C25947 /* Resources */,
+				2210F09C1374B273B5F86E5E /* [CP] Embed Pods Frameworks */,
+				19B5F2771DFFD11C174DB9CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +132,11 @@
 				TargetAttributes = {
 					CA3A7CBD21B4896C00C25947 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,13 +163,122 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA981F7221B4C5A00008A3E4 /* fonts in Resources */,
 				CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */,
 				CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */,
 				CA3A7CC721B4896C00C25947 /* Main.storyboard in Resources */,
+				CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B5F2771DFFD11C174DB9CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2210F09C1374B273B5F86E5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Mirror/Pods-The Mirror-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ABDDC833528391885DB2691 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Mirror-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA3A7CBA21B4896C00C25947 /* Sources */ = {
@@ -136,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3A7CC421B4896C00C25947 /* ViewController.swift in Sources */,
+				CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */,
 				CA3A7CC221B4896C00C25947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,15 +431,15 @@
 		};
 		CA3A7CD121B4896D00C25947 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F2CD6E1A266565B67AD5F4 /* Pods-The Mirror.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "The Mirror/The Mirror.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AH5RVS57R;
 				INFOPLIST_FILE = "The Mirror/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JB-Bruggeman.The-Mirror";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.James.The-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,15 +448,15 @@
 		};
 		CA3A7CD221B4896D00C25947 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55860BA3179714E0FB1AC013 /* Pods-The Mirror.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "The Mirror/The Mirror.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AH5RVS57R;
 				INFOPLIST_FILE = "The Mirror/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JB-Bruggeman.The-Mirror";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.James.The-Mirror";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
