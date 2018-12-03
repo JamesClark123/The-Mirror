@@ -75,6 +75,15 @@ extension ViewController: FUIAuthDelegate {
             print("*** We signed in with the user \(user.email ?? "unknown email")")
         }
     }
+    
+    func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
+        let loginViewController = FUIAuthPickerViewController(authUI: authUI)
+        
+//        loginViewController.view.backgroundColor = UIColor.init(red: 240.0, green: 235.0, blue: 224.0, alpha: 1.0)
+        
+        
+        return loginViewController
+    }
 }
 
 ///Users/bcswiftstudentloan1/Desktop/The Mirror - Final Project/The Mirror/Podfile

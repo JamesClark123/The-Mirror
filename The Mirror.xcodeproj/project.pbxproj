@@ -15,6 +15,7 @@
 		CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */; };
 		CA981F7221B4C5A00008A3E4 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CA981F7121B4C5A00008A3E4 /* fonts */; };
 		CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */; };
+		CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */; };
 		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA981F7121B4C5A00008A3E4 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				CA3A7CC121B4896C00C25947 /* AppDelegate.swift */,
 				CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */,
 				CA3A7CC321B4896C00C25947 /* ViewController.swift */,
+				CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */,
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -246,6 +250,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */,
 				CA3A7CC421B4896C00C25947 /* ViewController.swift in Sources */,
 				CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */,
 				CA3A7CC221B4896C00C25947 /* AppDelegate.swift in Sources */,
