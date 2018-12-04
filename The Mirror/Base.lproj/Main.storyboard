@@ -338,145 +338,14 @@
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to work on today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHa-BU-PMj">
-                                <rect key="frame" x="79" y="69.5" width="216" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHa-BU-PMj">
+                                <rect key="frame" x="79" y="69.5" width="217" height="17"/>
                                 <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-r5-5Fl">
-                                <rect key="frame" x="0.0" y="108.5" width="375" height="289"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-jd-5ie">
-                                        <rect key="frame" x="15" y="15" width="345" height="71"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-Ss-H8D">
-                                                <rect key="frame" x="0.0" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="71" id="JlL-0j-83g"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Track your mental state">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ue-Ur-O0W">
-                                                <rect key="frame" x="175" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="71" id="sAX-qY-52s"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Recommended Activity">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="1ue-Ur-O0W" firstAttribute="leading" secondItem="ltV-Ss-H8D" secondAttribute="trailing" constant="5" id="4ks-Me-eDX"/>
-                                            <constraint firstItem="1ue-Ur-O0W" firstAttribute="width" secondItem="ltV-Ss-H8D" secondAttribute="width" id="8CB-eb-8MI"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MvN-td-8Mh">
-                                        <rect key="frame" x="15" y="101" width="345" height="71"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jai-mz-dcJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Lower stress levels">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Q-XJ-or8">
-                                                <rect key="frame" x="175" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Improve productivity">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="71" id="SQX-ZC-M9w"/>
-                                            <constraint firstItem="i7Q-XJ-or8" firstAttribute="width" secondItem="jai-mz-dcJ" secondAttribute="width" id="bOa-g2-Vyf"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-Fc-s6Z">
-                                        <rect key="frame" x="15" y="187" width="345" height="71"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOA-oW-wj5">
-                                                <rect key="frame" x="0.0" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Increase happiness levels">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-R9-g3N">
-                                                <rect key="frame" x="175" y="0.0" width="170" height="71"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="14"/>
-                                                <state key="normal" title="Make a reflection">
-                                                    <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="35.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="6fk-R9-g3N" firstAttribute="width" secondItem="aOA-oW-wj5" secondAttribute="width" id="XyN-Gd-qaI"/>
-                                            <constraint firstAttribute="height" constant="71" id="mHR-D0-gSE"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="MvN-td-8Mh" firstAttribute="top" secondItem="DMs-jd-5ie" secondAttribute="bottom" constant="15" id="3s7-kY-Y90"/>
-                                    <constraint firstItem="DMs-jd-5ie" firstAttribute="top" secondItem="sgD-r5-5Fl" secondAttribute="top" constant="15" id="41G-yP-7o2"/>
-                                    <constraint firstAttribute="trailing" secondItem="DMs-jd-5ie" secondAttribute="trailing" constant="15" id="Ag5-Ka-Jwf"/>
-                                    <constraint firstItem="CgA-Fc-s6Z" firstAttribute="top" secondItem="MvN-td-8Mh" secondAttribute="bottom" constant="15" id="MbU-RD-f6p"/>
-                                    <constraint firstAttribute="height" constant="289" id="No5-UT-zkf"/>
-                                    <constraint firstAttribute="trailing" secondItem="CgA-Fc-s6Z" secondAttribute="trailing" constant="15" id="UFw-Hm-m9y"/>
-                                    <constraint firstItem="DMs-jd-5ie" firstAttribute="centerX" secondItem="sgD-r5-5Fl" secondAttribute="centerX" id="Vgi-wu-G9R"/>
-                                    <constraint firstItem="DMs-jd-5ie" firstAttribute="leading" secondItem="sgD-r5-5Fl" secondAttribute="leading" constant="15" id="lgE-6x-Zzi"/>
-                                    <constraint firstItem="CgA-Fc-s6Z" firstAttribute="leading" secondItem="sgD-r5-5Fl" secondAttribute="leading" constant="15" id="rbw-WH-aui"/>
-                                    <constraint firstItem="MvN-td-8Mh" firstAttribute="leading" secondItem="sgD-r5-5Fl" secondAttribute="leading" constant="15" id="yDJ-am-DHy"/>
-                                    <constraint firstAttribute="trailing" secondItem="MvN-td-8Mh" secondAttribute="trailing" constant="15" id="ySs-1Y-oeA"/>
-                                </constraints>
-                            </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="asy-4h-W4t">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="asy-4h-W4t">
                                 <rect key="frame" x="0.0" y="559" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="My3-y6-MaM"/>
                                     <barButtonItem title="HOME" image="Home Image" id="a0E-Kj-0oS">
@@ -509,18 +378,58 @@
                                 <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-P4-Ftx" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="102.5" width="343" height="324.5"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="143" translatesAutoresizingMaskIntoConstraints="NO" id="Sr7-gc-WUr">
+                                <rect key="frame" x="16" y="475" width="343" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-uc-g5K">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="cRO-oE-h82"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="20"/>
+                                        <state key="normal" title="I Feel Sad">
+                                            <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O6s-O4-TjO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46r-op-ymG">
+                                        <rect key="frame" x="243" y="0.0" width="100" height="37"/>
+                                        <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="20"/>
+                                        <state key="normal" title="I Feel Happy">
+                                            <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="happyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndf-hZ-ht9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="urh-2O-ZTa" secondAttribute="trailing" constant="131" id="GWR-9N-nTq"/>
-                            <constraint firstItem="CHa-BU-PMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="Jti-ts-pjg"/>
-                            <constraint firstItem="urh-2O-ZTa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="OGu-4Z-krV"/>
-                            <constraint firstItem="urh-2O-ZTa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="OYe-uZ-e6w"/>
-                            <constraint firstItem="sgD-r5-5Fl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eO9-7e-T1s"/>
-                            <constraint firstItem="sgD-r5-5Fl" firstAttribute="top" secondItem="CHa-BU-PMj" secondAttribute="bottom" constant="22" id="eow-jL-LwY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CHa-BU-PMj" secondAttribute="trailing" constant="80" id="iCi-3b-GZR"/>
-                            <constraint firstAttribute="trailing" secondItem="sgD-r5-5Fl" secondAttribute="trailing" id="isx-rS-FAJ"/>
-                            <constraint firstItem="CHa-BU-PMj" firstAttribute="top" secondItem="urh-2O-ZTa" secondAttribute="bottom" constant="8" id="xrj-x2-pLN"/>
+                            <constraint firstItem="Sr7-gc-WUr" firstAttribute="top" secondItem="3bB-P4-Ftx" secondAttribute="bottom" constant="48" id="2nb-i5-iDA"/>
+                            <constraint firstItem="3bB-P4-Ftx" firstAttribute="trailing" secondItem="Sr7-gc-WUr" secondAttribute="trailing" id="BtB-ed-fIa"/>
+                            <constraint firstItem="3bB-P4-Ftx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ixe-w6-anO"/>
+                            <constraint firstItem="Sr7-gc-WUr" firstAttribute="centerX" secondItem="asy-4h-W4t" secondAttribute="centerX" id="K27-Lm-8oQ"/>
+                            <constraint firstItem="asy-4h-W4t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KXl-GX-vUD"/>
+                            <constraint firstItem="CHa-BU-PMj" firstAttribute="centerX" secondItem="3bB-P4-Ftx" secondAttribute="centerX" id="Lff-AK-M8D"/>
+                            <constraint firstItem="asy-4h-W4t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P5I-s9-xDi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sr7-gc-WUr" secondAttribute="trailing" constant="16" id="QDx-q7-578"/>
+                            <constraint firstItem="CHa-BU-PMj" firstAttribute="top" secondItem="urh-2O-ZTa" secondAttribute="bottom" constant="8" symbolic="YES" id="RU3-cL-jcZ"/>
+                            <constraint firstItem="CHa-BU-PMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="XZ7-uV-cSk"/>
+                            <constraint firstItem="3bB-P4-Ftx" firstAttribute="leading" secondItem="Sr7-gc-WUr" secondAttribute="leading" id="YSE-72-NMS"/>
+                            <constraint firstItem="urh-2O-ZTa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="nYJ-Ct-VrC"/>
+                            <constraint firstItem="asy-4h-W4t" firstAttribute="top" secondItem="Sr7-gc-WUr" secondAttribute="bottom" constant="47" id="rwL-2R-AAM"/>
+                            <constraint firstItem="urh-2O-ZTa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="vmN-Ds-BKM"/>
+                            <constraint firstItem="3bB-P4-Ftx" firstAttribute="top" secondItem="CHa-BU-PMj" secondAttribute="bottom" constant="16" id="vqF-jz-mkG"/>
+                            <constraint firstItem="urh-2O-ZTa" firstAttribute="centerX" secondItem="CHa-BU-PMj" secondAttribute="centerX" id="yl5-kg-8IX"/>
+                            <constraint firstItem="Sr7-gc-WUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yt7-dL-2kN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -535,6 +444,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="urh-2O-ZTa" id="gZN-WD-FfA"/>
                         <outlet property="navigationBar" destination="dq3-wj-eiZ" id="XTg-0t-Jbp"/>
+                        <outlet property="pieChart" destination="3bB-P4-Ftx" id="2LQ-mj-9iV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -811,6 +721,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r87-Wc-cNM"/>
-        <segue reference="zjc-Hs-f3b"/>
+        <segue reference="vBf-IC-P74"/>
     </inferredMetricsTieBreakers>
 </document>

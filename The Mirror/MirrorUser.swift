@@ -15,21 +15,23 @@ class MirrorUser {
     var realName: String
     var documentID: String
     var exists: Bool
+    var happySadDictionary: [String: [Double]]
     
     var dictionary: [String: Any] {
-        return ["email": email, "realName": realName, "displayName": displayName, "documentID": documentID]
+        return ["email": email, "realName": realName, "displayName": displayName, "documentID": documentID, "happySadDictionary": happySadDictionary]
     }
     
-    init(email: String, realName: String, displayName: String, documentID: String, exists: Bool) {
+    init(email: String, realName: String, displayName: String, documentID: String, exists: Bool, happySadDictionary: [String: [Double]]) {
         self.email = email
         self.realName = realName
         self.displayName = displayName
         self.documentID = documentID
         self.exists = exists
+        self.happySadDictionary = happySadDictionary
     }
     
     convenience init(user: User) {
-        self.init(email: user.email ?? "", realName: "", displayName: user.displayName ?? "", documentID: user.uid, exists: false)
+        self.init(email: user.email ?? "", realName: "", displayName: user.displayName ?? "", documentID: user.uid, exists: false, happySadDictionary: [:])
     }
     
     
@@ -46,7 +48,9 @@ class MirrorUser {
             guard document?.exists == false else {
                 print("the document already exists for this user")
                 self.realName = document?.get("realName") as? String ?? ""
+                self.happySadDictionary = document?.get("happySadDictionary") as? [String: [Double]] ?? [:]
                 print(self.realName)
+                print(self.happySadDictionary)
                 self.exists = true
                 completed()
                 return

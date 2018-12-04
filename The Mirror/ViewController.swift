@@ -10,13 +10,27 @@ import UIKit
 import Firebase
 import FirebaseAuthUI
 import FirebaseFacebookAuthUI
+import Charts
 
 class ViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationItem!
-    @IBOutlet weak var statisticsBarButton: UIBarButtonItem!
-    @IBOutlet weak var settingsBarButton: UIBarButtonItem!
-    @IBOutlet weak var homeTabBarButton: UITabBarItem!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var pieChart: PieChartView!
+    
+    let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    } ()
+    
+    let blueColor = UIColor(red: CGFloat(81.0/255), green: CGFloat(157.0/255), blue: CGFloat(148.0/255), alpha: 1.0)
+    let redColor = UIColor(red: CGFloat(172.0/255), green: CGFloat(62.0/255), blue: CGFloat(22.0/255), alpha: 1.0)
+    let armyGreenColor = UIColor(red: CGFloat(70.0/255), green: CGFloat(51.0/255), blue: CGFloat(20/255), alpha: CGFloat(1.0))
+    
+    var todaysValues = [Double]()
+    var happy = PieChartDataEntry(value: 0)
+    var sad = PieChartDataEntry(value: 0)
+    var pieChartEntries = [PieChartDataEntry] ()
     
     var authUI: FUIAuth!
     var user: MirrorUser!
@@ -25,6 +39,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
+        
+        happy.label = "Happy"
+        sad.label = "Sad"
+        pieChart.entryLabelColor = armyGreenColor
+        pieChart.entryLabelFont = UIFont(name: "Cormorant-Bold", size: CGFloat(12.0))
+        pieChartEntries = [happy, sad]
+        pieChart.holeColor = pieChart.backgroundColor
+        updatePieChart()
         
         
         
@@ -46,10 +68,27 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         signIn()
         
-//        if(user.realName == "") {
-//            print("What viewDidAppear Sees" + user.realName)
-//            performSegue(withIdentifier: "StartUpProcess", sender: self)
-//        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        user.saveData()
+    }
+    
+    func updatePieChart() {
+        let chartDataSet = PieChartDataSet(values: pieChartEntries, label: nil)
+        let chartData = PieChartData(dataSet: chartDataSet)
+        let colors = [blueColor, redColor   ]
+        chartDataSet.colors = colors
+        chartDataSet.valueFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0)) ?? UIFont.systemFont(ofSize: CGFloat(12.0))
+        
+        
+        pieChart.entryLabelFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0))
+        chartData.setValueFont(UIFont(name: "Cormorant-Regular", size: CGFloat(12.0)) ?? UIFont.systemFont(ofSize: CGFloat(12.0)))
+        pieChart.accessibilityElementsHidden = true
+        
+        
+        pieChart.data = chartData
     }
     
     func signIn() {
@@ -67,11 +106,34 @@ class ViewController: UIViewController {
                     self.performSegue(withIdentifier: "StartUpProcess", sender: self)
                 } else {
                     self.nameLabel.text = "Hi " + self.user.realName + "!"
+                    if let tv = self.user.happySadDictionary[self.formatter.string(from: Date())] {
+                        print("**** \(tv[0]) \(tv[1])")
+                        self.happy.value = tv[0]
+                        self.sad.value = tv[1]
+                        self.updatePieChart()
+                    } else {
+                        self.user.happySadDictionary[self.formatter.string(from: Date())] = [0, 0]
+                        self.happy.value = 0
+                        self.sad.value = 0
+                    }
                 }
             }
             
         }
         
+    }
+    @IBAction func sadButtonPressed(_ sender: UIButton) {
+        sad.value = sad.value + 1.0
+        updatePieChart()
+        user.happySadDictionary[formatter.string(from: Date())] = [happy.value, sad.value]
+        user.saveData()
+    }
+    
+    @IBAction func happyButtonPressed(_ sender: UIButton) {
+        happy.value = happy.value + 1.0
+        updatePieChart()
+        user.happySadDictionary[formatter.string(from: Date())] = [happy.value, sad.value]
+        user.saveData()
     }
     
     @IBAction func unwindToHome(seque: UIStoryboardSegue) {
