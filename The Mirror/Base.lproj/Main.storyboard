@@ -355,7 +355,7 @@
                                     <barButtonItem title="CALENDAR" image="Calendar Image" id="RpV-it-kSc">
                                         <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="4mJ-3f-2yI" kind="show" id="BDl-5L-jM6"/>
+                                            <segue destination="4mJ-3f-2yI" kind="show" id="FCv-fu-inu"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SZ4-7V-eqR"/>
@@ -433,18 +433,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="THE MIRROR" id="dq3-wj-eiZ">
-                        <barButtonItem key="leftBarButtonItem" image="Statistics Button Image" id="Axo-lw-Zt1">
-                            <connections>
-                                <segue destination="vpy-D6-pxf" kind="show" identifier="StartUpProcess" id="CQJ-Fo-tyA"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Settings Button Image" id="jsv-ZT-HCN"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="THE MIRROR" id="dq3-wj-eiZ"/>
                     <connections>
                         <outlet property="nameLabel" destination="urh-2O-ZTa" id="gZN-WD-FfA"/>
                         <outlet property="navigationBar" destination="dq3-wj-eiZ" id="XTg-0t-Jbp"/>
                         <outlet property="pieChart" destination="3bB-P4-Ftx" id="2LQ-mj-9iV"/>
+                        <segue destination="vpy-D6-pxf" kind="show" identifier="StartUpProcess" id="iQf-nm-DvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -544,7 +538,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-db-Iy2" customClass="FSCalendar">
-                                <rect key="frame" x="15" y="65" width="345" height="361"/>
+                                <rect key="frame" x="16" y="40" width="345" height="317"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
@@ -598,31 +592,54 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderSelectionColor">
                                         <color key="value" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fakeEventDots" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fakeSubtitles" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showsPlaceholders" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsScopeHandle" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="trailing" secondItem="xBp-db-Iy2" secondAttribute="trailing" constant="15" id="4un-Cm-4y4"/>
-                            <constraint firstItem="xBp-db-Iy2" firstAttribute="top" secondItem="iqp-Oe-cMu" secondAttribute="top" constant="65" id="DHC-3Q-u5T"/>
-                            <constraint firstItem="xBp-db-Iy2" firstAttribute="leading" secondItem="iqp-Oe-cMu" secondAttribute="leading" constant="15" id="Qwi-g7-5xT"/>
-                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="bottom" secondItem="xBp-db-Iy2" secondAttribute="bottom" constant="177" id="huX-lG-nkF"/>
+                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="trailing" secondItem="xBp-db-Iy2" secondAttribute="trailing" constant="14" id="4un-Cm-4y4"/>
+                            <constraint firstItem="xBp-db-Iy2" firstAttribute="top" secondItem="iqp-Oe-cMu" secondAttribute="top" constant="40" id="DHC-3Q-u5T"/>
+                            <constraint firstItem="xBp-db-Iy2" firstAttribute="leading" secondItem="iqp-Oe-cMu" secondAttribute="leading" constant="16" id="Qwi-g7-5xT"/>
+                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="bottom" secondItem="xBp-db-Iy2" secondAttribute="bottom" constant="202" id="huX-lG-nkF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iqp-Oe-cMu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="THE MIRROR" id="jg2-aO-Xqm">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="LxK-aB-mpA">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="sLX-PZ-hZe"/>
+                        <barButtonItem title="Item" image="Home Image" id="1JU-Iw-NEB">
                             <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="backButtonPressed:" destination="Ljo-Bl-VCB" id="bFB-0r-hWG"/>
+                                <segue destination="A9a-w5-50m" kind="show" id="RrR-JV-64s"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="f2i-OI-RWq"/>
+                        <barButtonItem title="Item" image="Calendar Image" id="JIO-Ch-xsX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fxb-cM-XVr"/>
+                        <barButtonItem title="Item" image="Activities Image" id="bp5-ed-4uO">
+                            <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="xBN-n8-wVF" kind="show" id="6Pg-AY-39Z"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Jiu-9e-whe"/>
+                        <barButtonItem title="Item" image="Profile Image" id="WKo-x9-RIJ">
+                            <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="9dL-JJ-LFR" kind="show" id="7cb-0l-owV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Qz7-Cd-xYd"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="THE MIRROR" id="jg2-aO-Xqm"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendar" destination="xBp-db-Iy2" id="wOq-uD-TOe"/>
                     </connections>
@@ -658,7 +675,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1Mp-Mv-o1Z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4mJ-3f-2yI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="4mJ-3f-2yI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="8X1-Tw-x4a">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -671,13 +688,18 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="gE5-7r-BRj">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Ljo-Bl-VCB" kind="relationship" relationship="rootViewController" id="bkL-7N-qzw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trw-fZ-nAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="-81"/>
+            <point key="canvasLocation" x="1999" y="-182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YTM-A2-mRP">
@@ -716,11 +738,10 @@
         <image name="Calendar Image" width="16" height="18"/>
         <image name="Home Image" width="19" height="18"/>
         <image name="Profile Image" width="16" height="16"/>
-        <image name="Settings Button Image" width="24" height="6"/>
-        <image name="Statistics Button Image" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r87-Wc-cNM"/>
+        <segue reference="RrR-JV-64s"/>
+        <segue reference="6Pg-AY-39Z"/>
         <segue reference="vBf-IC-P74"/>
     </inferredMetricsTieBreakers>
 </document>

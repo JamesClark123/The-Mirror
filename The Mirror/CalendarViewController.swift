@@ -13,6 +13,8 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     @IBOutlet weak var calendar: FSCalendar!
     
+    var user: MirrorUser!
+    
     let gregorian = Calendar(identifier: .gregorian)
     
     let formatter: DateFormatter = {
@@ -27,8 +29,13 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         self.calendar.appearance.caseOptions = [.headerUsesUpperCase,.weekdayUsesUpperCase]
         self.calendar.select(Date())
         
+        calendar.delegate = self
+        calendar.dataSource = self
+        
         let scopeGesture = UIPanGestureRecognizer(target: self.calendar, action: #selector(self.calendar.handleScopeGesture(_:)))
         self.calendar.addGestureRecognizer(scopeGesture)
+        
+        self.calendar.appearance.eventDefaultColor = UIColor(red: CGFloat(70.0/255), green: CGFloat(51.0/255), blue: CGFloat(20/255), alpha: CGFloat(1.0))
         
         self.calendar.accessibilityIdentifier = "calendar"
         
@@ -54,7 +61,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
 //    }
     
 //    func maximumDate(for calendar: FSCalendar) -> Date {
-//        return self.formatter.date(from: "2017/10/30")!
+//        return Date()
 //    }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuthUI
 import FirebaseFacebookAuthUI
+import FirebaseGoogleAuthUI
 import Charts
 
 class ViewController: UIViewController {
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
+        
         
         happy.label = "Happy"
         sad.label = "Sad"
@@ -73,6 +75,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         user.saveData()
+        if segue.identifier == "ToCalendar" {
+            let destination = segue.destination as! CalendarViewController
+            destination.user = user
+        }
     }
     
     func updatePieChart() {
@@ -93,7 +99,7 @@ class ViewController: UIViewController {
     
     func signIn() {
         let providers: [FUIAuthProvider] = [
-        FUIFacebookAuth(),
+        FUIFacebookAuth(), FUIGoogleAuth()
         ]
         let currentUser = authUI.auth?.currentUser
         if currentUser == nil {
