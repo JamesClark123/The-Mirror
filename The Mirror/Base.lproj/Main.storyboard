@@ -146,24 +146,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's Your Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-AL-uri">
-                                <rect key="frame" x="64" y="82" width="246" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-AL-uri">
+                                <rect key="frame" x="64.5" y="82" width="246" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="NAME" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-r9-6kM">
-                                <rect key="frame" x="64" y="158" width="246" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="NAME" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8m1-r9-6kM">
+                                <rect key="frame" x="156" y="158" width="63" height="30"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07h-5j-ud3">
-                                <rect key="frame" x="161" y="578" width="57" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07h-5j-ud3">
+                                <rect key="frame" x="159" y="578" width="57" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="DONE">
                                     <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -175,6 +172,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hyh-AL-uri" firstAttribute="centerX" secondItem="aFD-uQ-M1Q" secondAttribute="centerX" id="7yZ-nw-mMg"/>
+                            <constraint firstItem="8m1-r9-6kM" firstAttribute="top" secondItem="hyh-AL-uri" secondAttribute="bottom" constant="43" id="Mfa-Jm-bFt"/>
+                            <constraint firstItem="07h-5j-ud3" firstAttribute="centerX" secondItem="aFD-uQ-M1Q" secondAttribute="centerX" id="OdV-dB-vWr"/>
+                            <constraint firstItem="hyh-AL-uri" firstAttribute="top" secondItem="fhG-Ds-oJg" secondAttribute="top" constant="62" id="W75-8h-06W"/>
+                            <constraint firstItem="fhG-Ds-oJg" firstAttribute="bottom" secondItem="07h-5j-ud3" secondAttribute="bottom" constant="53" id="gfg-mz-kal"/>
+                            <constraint firstItem="8m1-r9-6kM" firstAttribute="centerX" secondItem="aFD-uQ-M1Q" secondAttribute="centerX" id="pap-3Q-qYb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fhG-Ds-oJg"/>
                     </view>
                     <connections>
@@ -293,9 +298,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-kd-79M">
-                                <rect key="frame" x="104" y="314" width="167" height="38"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-kd-79M">
+                                <rect key="frame" x="149.5" y="314.5" width="76" height="38"/>
                                 <fontDescription key="fontDescription" name="Cormorant-SemiBold" family="Cormorant" pointSize="21"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -306,8 +310,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2v4-kd-79M" firstAttribute="centerY" secondItem="cRc-sP-OyX" secondAttribute="centerY" id="4QK-Sf-OAf"/>
+                            <constraint firstItem="2v4-kd-79M" firstAttribute="centerX" secondItem="cRc-sP-OyX" secondAttribute="centerX" id="gYr-Hr-GD4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7qQ-zW-8Mw"/>
                     </view>
+                    <connections>
+                        <segue destination="A9a-w5-50m" kind="showDetail" identifier="justSignedOut" id="r87-Wc-cNM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNV-Tq-aeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,9 +479,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="My3-y6-MaM"/>
-                                    <barButtonItem title="HOME" image="Home Image" id="a0E-Kj-0oS"/>
+                                    <barButtonItem title="HOME" image="Home Image" id="a0E-Kj-0oS">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VLR-oO-3c4"/>
                                     <barButtonItem title="CALENDAR" image="Calendar Image" id="RpV-it-kSc">
+                                        <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="4mJ-3f-2yI" kind="show" id="BDl-5L-jM6"/>
                                         </connections>
@@ -482,7 +496,14 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fUh-Z6-q4H"/>
-                                    <barButtonItem title="PROFILE" image="Profile Image" id="6AB-m8-GQY"/>
+                                    <barButtonItem title="PROFILE" image="Profile Image" id="6AB-m8-GQY">
+                                        <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="9dL-JJ-LFR" kind="popoverPresentation" popoverAnchorBarButtonItem="6AB-m8-GQY" id="vBf-IC-P74">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="s5M-kR-0El"/>
                                 </items>
                                 <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -506,22 +527,14 @@
                     <navigationItem key="navigationItem" title="THE MIRROR" id="dq3-wj-eiZ">
                         <barButtonItem key="leftBarButtonItem" image="Statistics Button Image" id="Axo-lw-Zt1">
                             <connections>
-                                <segue destination="vpy-D6-pxf" kind="show" id="CQJ-Fo-tyA"/>
+                                <segue destination="vpy-D6-pxf" kind="show" identifier="StartUpProcess" id="CQJ-Fo-tyA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Settings Button Image" id="jsv-ZT-HCN">
-                            <connections>
-                                <segue destination="9dL-JJ-LFR" kind="popoverPresentation" popoverAnchorBarButtonItem="jsv-ZT-HCN" id="9p5-7L-pK0">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Settings Button Image" id="jsv-ZT-HCN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nameLabel" destination="urh-2O-ZTa" id="gZN-WD-FfA"/>
                         <outlet property="navigationBar" destination="dq3-wj-eiZ" id="XTg-0t-Jbp"/>
-                        <outlet property="settingsBarButton" destination="jsv-ZT-HCN" id="Eb9-7D-ug0"/>
-                        <outlet property="statisticsBarButton" destination="Axo-lw-Zt1" id="0Ib-Xb-GLm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -536,27 +549,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-8W-xMz">
-                                <rect key="frame" x="0.0" y="559" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XyZ-Ba-ewq"/>
-                                    <barButtonItem title="HOME" image="Home Image" id="NQZ-kq-X5c">
-                                        <connections>
-                                            <segue destination="A9a-w5-50m" kind="showDetail" id="1GB-iv-EFo"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pLo-ne-zf3"/>
-                                    <barButtonItem title="CALENDAR" image="Calendar Image" id="mQW-Ir-5Bf"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Jd-39-Vp1"/>
-                                    <barButtonItem title="ACTIVITIES" image="Activities Image" id="JOS-Hn-9pK"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QSA-qE-SKf"/>
-                                    <barButtonItem title="PROFILE" image="Profile Image" id="9YM-xx-DTP"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MST-Qk-VIy"/>
-                                </items>
-                                <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Some Inspirational Quote" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92D-BS-c9H">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92D-BS-c9H">
                                 <rect key="frame" x="16" y="82" width="343" height="315"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
@@ -566,8 +559,8 @@
                                 <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="603-Sb-F71">
-                                <rect key="frame" x="16" y="422" width="343" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="603-Sb-F71">
+                                <rect key="frame" x="16" y="422" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Cormorant-Regular" family="Cormorant" pointSize="25"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -580,23 +573,49 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="92D-BS-c9H" firstAttribute="leading" secondItem="NDr-Gt-LHh" secondAttribute="leading" constant="16" id="24H-It-3iA"/>
                             <constraint firstItem="qCg-C7-c0U" firstAttribute="centerX" secondItem="lyj-tm-vTi" secondAttribute="centerX" id="CNP-3S-50k"/>
                             <constraint firstItem="603-Sb-F71" firstAttribute="top" secondItem="92D-BS-c9H" secondAttribute="bottom" constant="25" id="IBQ-Ab-ztW"/>
                             <constraint firstItem="NDr-Gt-LHh" firstAttribute="trailing" secondItem="603-Sb-F71" secondAttribute="trailing" constant="16" id="KYv-dU-DHO"/>
                             <constraint firstItem="603-Sb-F71" firstAttribute="leading" secondItem="NDr-Gt-LHh" secondAttribute="leading" constant="16" id="NOe-nl-CDM"/>
-                            <constraint firstItem="9MM-8W-xMz" firstAttribute="trailing" secondItem="NDr-Gt-LHh" secondAttribute="trailing" id="SUW-N9-E5d"/>
                             <constraint firstItem="NDr-Gt-LHh" firstAttribute="trailing" secondItem="92D-BS-c9H" secondAttribute="trailing" constant="16" id="Zdn-Y0-avZ"/>
                             <constraint firstItem="92D-BS-c9H" firstAttribute="top" secondItem="qCg-C7-c0U" secondAttribute="bottom" constant="35" id="a0F-yV-1I7"/>
                             <constraint firstItem="qCg-C7-c0U" firstAttribute="top" secondItem="NDr-Gt-LHh" secondAttribute="top" constant="25" id="aCC-T2-6ec"/>
-                            <constraint firstItem="9MM-8W-xMz" firstAttribute="leading" secondItem="NDr-Gt-LHh" secondAttribute="leading" id="alk-xC-zpY"/>
                             <constraint firstItem="92D-BS-c9H" firstAttribute="centerX" secondItem="lyj-tm-vTi" secondAttribute="centerX" id="gfC-X9-9LO"/>
-                            <constraint firstItem="9MM-8W-xMz" firstAttribute="bottom" secondItem="NDr-Gt-LHh" secondAttribute="bottom" id="xkO-AR-iM0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NDr-Gt-LHh"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="P0d-H9-3tS"/>
+                        <barButtonItem title="Item" image="Home Image" id="PD3-lg-7Tx">
+                            <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="A9a-w5-50m" kind="showDetail" id="9hd-jo-GFl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="R0c-t7-aGV"/>
+                        <barButtonItem title="Item" image="Calendar Image" id="uuF-gL-xWj">
+                            <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="s48-f9-c06"/>
+                        <barButtonItem title="Item" image="Activities Image" id="DxF-6K-LZc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yDT-0p-9eC"/>
+                        <barButtonItem title="Item" image="Profile Image" id="HVJ-T5-seS">
+                            <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="9dL-JJ-LFR" kind="popoverPresentation" popoverAnchorBarButtonItem="HVJ-T5-seS" id="zjc-Hs-f3b">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Scx-qM-qK2"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="THE MIRROR" id="Ga8-hO-uRZ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="byLine" destination="603-Sb-F71" id="hXC-jy-yJi"/>
                         <outlet property="quoteText" destination="92D-BS-c9H" id="hCq-VN-wvf"/>
@@ -753,7 +772,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YTM-A2-mRP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gpV-rH-Akg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="gpV-rH-Akg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="GT6-9Y-lTM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -766,6 +785,13 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="FMp-8J-d1L">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="xBN-n8-wVF" kind="relationship" relationship="rootViewController" id="iY0-lY-rdy"/>
                     </connections>
@@ -783,4 +809,8 @@
         <image name="Settings Button Image" width="24" height="6"/>
         <image name="Statistics Button Image" width="35" height="35"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="r87-Wc-cNM"/>
+        <segue reference="zjc-Hs-f3b"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -34,10 +34,10 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80)
         
-        self.tabBarController?.tabBar.selectedItem = homeTabBarButton
-        self.tabBarController?.tabBar.tintColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 1)
-        self.tabBarController?.tabBar.selectedItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(displayP3Red: 240, green: 235, blue: 224, alpha: 1)
+//        self.tabBarController?.tabBar.selectedItem = homeTabBarButton
+//        self.tabBarController?.tabBar.tintColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 1)
+//        self.tabBarController?.tabBar.selectedItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+//        self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(displayP3Red: 240, green: 235, blue: 224, alpha: 1)
         
         
     }
@@ -45,6 +45,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         signIn()
+        
+//        if(user.realName == "") {
+//            print("What viewDidAppear Sees" + user.realName)
+//            performSegue(withIdentifier: "StartUpProcess", sender: self)
+//        }
     }
     
     func signIn() {
@@ -57,16 +62,30 @@ class ViewController: UIViewController {
             present(authUI.authViewController(), animated: true, completion: nil)
         } else {
             user = MirrorUser(user: currentUser!)
-            user.isNewUser()
+            user.isNewUser() {
+                if self.user.exists == false {
+                    self.performSegue(withIdentifier: "StartUpProcess", sender: self)
+                } else {
+                    self.nameLabel.text = "Hi " + self.user.realName + "!"
+                }
+            }
+            
         }
+        
     }
     
     @IBAction func unwindToHome(seque: UIStoryboardSegue) {
         
         if seque.source is YourNameVC {
             if let senderVC = seque.source as? YourNameVC {
-                user.realName = senderVC.newName
+                if let name = senderVC.newName {
+                    user.realName = name
+                    print(name)
+                }
+                
+                
                 nameLabel.text = "Hi " + senderVC.newName + "!"
+                user.saveData()
             }
         }
     }

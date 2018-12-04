@@ -21,7 +21,6 @@
     "author" : "xcode"
   },
   "properties" : {
-    "template-rendering-intent" : "original",
     "preserves-vector-representation" : true
   }
 }

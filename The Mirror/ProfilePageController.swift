@@ -24,12 +24,14 @@ class ProfilePageController: UIViewController {
         print("*** Error when trying to sign out")
         }
         
-        let isPresentingInAddMode = presentingViewController is UINavigationController
-        if isPresentingInAddMode {
-            dismiss(animated: true, completion: nil)
-        } else {
-            navigationController?.popViewController(animated: true)
-        }
+        self.performSegue(withIdentifier: "justSignedOut", sender: self)
+        
+//        let isPresentingInAddMode = presentingViewController is UINavigationController
+//        if isPresentingInAddMode {
+//            dismiss(animated: true, completion: nil)
+//        } else {
+//            navigationController?.popViewController(animated: true)
+//        }
         
     }
     

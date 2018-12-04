@@ -17,9 +17,14 @@ class InspirationalQuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        homeButton.tintColor = UIColor(red: 240, green: 235, blue: 224, alpha: 1)
+//        quoteButton.tintColor = UIColor.white
+        
+        
+        
         quotes = InspirationalQuotesData()
         
-        print("about to get quote")
+//        print("about to get quote")
 
         self.quotes.getQuote() {
             self.quoteText.text = self.quotes.iQ.quote
