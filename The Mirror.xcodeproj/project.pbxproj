@@ -12,7 +12,6 @@
 		CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CC821B4896D00C25947 /* Assets.xcassets */; };
 		CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */; };
 		CA3A7CD421B48ACF00C25947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */; };
-		CA981F7221B4C5A00008A3E4 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CA981F7121B4C5A00008A3E4 /* fonts */; };
 		CA981F7421B4C9020008A3E4 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */; };
 		CA981F7621B504DE0008A3E4 /* ProfilePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */; };
 		CA981F7A21B51EB00008A3E4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */; };
@@ -23,6 +22,17 @@
 		CACC737E21B55FBD0057F57B /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737D21B55FBD0057F57B /* StartUpViewController.swift */; };
 		CACC738021B56AF60057F57B /* StartPage1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC737F21B56AF60057F57B /* StartPage1VC.swift */; };
 		CACC738221B577C60057F57B /* YourNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC738121B577C60057F57B /* YourNameVC.swift */; };
+		CACC738521B7527A0057F57B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = CACC738421B7527A0057F57B /* Fonts */; };
+		CACC738721B752C20057F57B /* Cormorant-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC738621B752C20057F57B /* Cormorant-Bold.otf */; };
+		CACC739821B7530A0057F57B /* Cormorant-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC738E21B753080057F57B /* Cormorant-BoldItalic.otf */; };
+		CACC739921B7530A0057F57B /* Cormorant-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC738F21B753090057F57B /* Cormorant-LightItalic.otf */; };
+		CACC739A21B7530A0057F57B /* Cormorant-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739021B753090057F57B /* Cormorant-MediumItalic.otf */; };
+		CACC739C21B7530A0057F57B /* Cormorant-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739221B753090057F57B /* Cormorant-Italic.otf */; };
+		CACC739D21B7530A0057F57B /* Cormorant-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739321B753090057F57B /* Cormorant-SemiBold.otf */; };
+		CACC739E21B7530A0057F57B /* Cormorant-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739421B753090057F57B /* Cormorant-Light.otf */; };
+		CACC739F21B7530A0057F57B /* Cormorant-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739521B753090057F57B /* Cormorant-Medium.otf */; };
+		CACC73A021B7530A0057F57B /* Cormorant-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739621B7530A0057F57B /* Cormorant-Regular.otf */; };
+		CACC73A121B7530A0057F57B /* Cormorant-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CACC739721B7530A0057F57B /* Cormorant-SemiBoldItalic.otf */; };
 		F43E1DB7A1A9B1CF872B9D52 /* Pods_The_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFAA4E305A2789256DD889 /* Pods_The_Mirror.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +48,6 @@
 		CA3A7CCB21B4896D00C25947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3A7CCD21B4896D00C25947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CA981F7121B4C5A00008A3E4 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		CA981F7321B4C9020008A3E4 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		CA981F7521B504DE0008A3E4 /* ProfilePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageController.swift; sourceTree = "<group>"; };
 		CA981F7921B51EB00008A3E4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +58,17 @@
 		CACC737D21B55FBD0057F57B /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		CACC737F21B56AF60057F57B /* StartPage1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage1VC.swift; sourceTree = "<group>"; };
 		CACC738121B577C60057F57B /* YourNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourNameVC.swift; sourceTree = "<group>"; };
+		CACC738421B7527A0057F57B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
+		CACC738621B752C20057F57B /* Cormorant-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cormorant-Bold.otf"; sourceTree = "<group>"; };
+		CACC738E21B753080057F57B /* Cormorant-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-BoldItalic.otf"; path = "Fonts/Cormorant-BoldItalic.otf"; sourceTree = "<group>"; };
+		CACC738F21B753090057F57B /* Cormorant-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-LightItalic.otf"; path = "Fonts/Cormorant-LightItalic.otf"; sourceTree = "<group>"; };
+		CACC739021B753090057F57B /* Cormorant-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-MediumItalic.otf"; path = "Fonts/Cormorant-MediumItalic.otf"; sourceTree = "<group>"; };
+		CACC739221B753090057F57B /* Cormorant-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-Italic.otf"; path = "Fonts/Cormorant-Italic.otf"; sourceTree = "<group>"; };
+		CACC739321B753090057F57B /* Cormorant-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-SemiBold.otf"; path = "Fonts/Cormorant-SemiBold.otf"; sourceTree = "<group>"; };
+		CACC739421B753090057F57B /* Cormorant-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-Light.otf"; path = "Fonts/Cormorant-Light.otf"; sourceTree = "<group>"; };
+		CACC739521B753090057F57B /* Cormorant-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-Medium.otf"; path = "Fonts/Cormorant-Medium.otf"; sourceTree = "<group>"; };
+		CACC739621B7530A0057F57B /* Cormorant-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-Regular.otf"; path = "Fonts/Cormorant-Regular.otf"; sourceTree = "<group>"; };
+		CACC739721B7530A0057F57B /* Cormorant-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cormorant-SemiBoldItalic.otf"; path = "Fonts/Cormorant-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +103,16 @@
 		CA3A7CB521B4896B00C25947 = {
 			isa = PBXGroup;
 			children = (
+				CACC739221B753090057F57B /* Cormorant-Italic.otf */,
+				CACC739421B753090057F57B /* Cormorant-Light.otf */,
+				CACC738621B752C20057F57B /* Cormorant-Bold.otf */,
+				CACC738E21B753080057F57B /* Cormorant-BoldItalic.otf */,
+				CACC738F21B753090057F57B /* Cormorant-LightItalic.otf */,
+				CACC739521B753090057F57B /* Cormorant-Medium.otf */,
+				CACC739021B753090057F57B /* Cormorant-MediumItalic.otf */,
+				CACC739621B7530A0057F57B /* Cormorant-Regular.otf */,
+				CACC739321B753090057F57B /* Cormorant-SemiBold.otf */,
+				CACC739721B7530A0057F57B /* Cormorant-SemiBoldItalic.otf */,
 				CA3A7CC021B4896C00C25947 /* The Mirror */,
 				CA3A7CBF21B4896C00C25947 /* Products */,
 				11541E0827B0F73476A5DF84 /* Pods */,
@@ -115,10 +145,10 @@
 				CA3A7CC521B4896C00C25947 /* Main.storyboard */,
 				CA3A7CC821B4896D00C25947 /* Assets.xcassets */,
 				CA3A7CCA21B4896D00C25947 /* LaunchScreen.storyboard */,
+				CACC738421B7527A0057F57B /* Fonts */,
 				CA3A7CCD21B4896D00C25947 /* Info.plist */,
 				CA3A7CD321B48ACF00C25947 /* GoogleService-Info.plist */,
 				CA981F7C21B5246C0008A3E4 /* Objc-Bridge-Header.h */,
-				CA981F7121B4C5A00008A3E4 /* fonts */,
 			);
 			path = "The Mirror";
 			sourceTree = "<group>";
@@ -189,7 +219,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA981F7221B4C5A00008A3E4 /* fonts in Resources */,
+				CACC739821B7530A0057F57B /* Cormorant-BoldItalic.otf in Resources */,
+				CACC739921B7530A0057F57B /* Cormorant-LightItalic.otf in Resources */,
+				CACC739A21B7530A0057F57B /* Cormorant-MediumItalic.otf in Resources */,
+				CACC739C21B7530A0057F57B /* Cormorant-Italic.otf in Resources */,
+				CACC739D21B7530A0057F57B /* Cormorant-SemiBold.otf in Resources */,
+				CACC739E21B7530A0057F57B /* Cormorant-Light.otf in Resources */,
+				CACC739F21B7530A0057F57B /* Cormorant-Medium.otf in Resources */,
+				CACC73A021B7530A0057F57B /* Cormorant-Regular.otf in Resources */,
+				CACC73A121B7530A0057F57B /* Cormorant-SemiBoldItalic.otf in Resources */,
+				CACC738721B752C20057F57B /* Cormorant-Bold.otf in Resources */,
+				CACC738521B7527A0057F57B /* Fonts in Resources */,
 				CA981F7B21B523340008A3E4 /* Main.storyboard in Resources */,
 				CA3A7CCC21B4896D00C25947 /* LaunchScreen.storyboard in Resources */,
 				CA3A7CC921B4896D00C25947 /* Assets.xcassets in Resources */,

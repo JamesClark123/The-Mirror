@@ -47,8 +47,16 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Cormorant-Regular.otf</string>
 		<string>Cormorant-Bold.otf</string>
 		<string>Cormorant-BoldItalic.otf</string>
+		<string>Cormorant-Italic.otf</string>
+		<string>Cormorant-Light.otf</string>
+		<string>Cormorant-LightItalic.otf</string>
+		<string>Cormorant-Medium.otf</string>
+		<string>Cormorant-MediumItalic.otf</string>
+		<string>Cormorant-SemiBold.otf</string>
+		<string>Cormorant-SemiBoldItalic.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -41,11 +41,14 @@ class ViewController: UIViewController {
         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Cormorant-Bold", size: 25)!]
         
         happy.label = "Happy"
         sad.label = "Sad"
         pieChart.entryLabelColor = armyGreenColor
         pieChart.entryLabelFont = UIFont(name: "Cormorant-Bold", size: CGFloat(12.0))
+        pieChart.drawEntryLabelsEnabled = false
+        pieChart.legend.enabled = false
         pieChartEntries = [happy, sad]
         pieChart.holeColor = pieChart.backgroundColor
         updatePieChart()
@@ -76,8 +79,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         user.saveData()
         if segue.identifier == "ToCalendar" {
-            let destination = segue.destination as! CalendarViewController
-            destination.user = user
+            let destination = segue.destination as! UINavigationController
+            let calendar = destination.viewControllers.first as! CalendarViewController
+            calendar.user = user
         }
     }
     
@@ -87,6 +91,10 @@ class ViewController: UIViewController {
         let colors = [blueColor, redColor   ]
         chartDataSet.colors = colors
         chartDataSet.valueFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0)) ?? UIFont.systemFont(ofSize: CGFloat(12.0))
+        
+        chartDataSet.drawIconsEnabled = false
+        chartDataSet.drawValuesEnabled = false
+        chartData.setDrawValues(false)
         
         
         pieChart.entryLabelFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0))

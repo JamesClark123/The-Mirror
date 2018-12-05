@@ -8,10 +8,21 @@
 
 import UIKit
 import FSCalendar
+import Charts
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
     
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var pieChart: PieChartView!
+    
+    let blueColor = UIColor(red: CGFloat(81.0/255), green: CGFloat(157.0/255), blue: CGFloat(148.0/255), alpha: 1.0)
+    let redColor = UIColor(red: CGFloat(172.0/255), green: CGFloat(62.0/255), blue: CGFloat(22.0/255), alpha: 1.0)
+    let armyGreenColor = UIColor(red: CGFloat(70.0/255), green: CGFloat(51.0/255), blue: CGFloat(20/255), alpha: CGFloat(1.0))
+    
+    var todaysValues = [Double]()
+    var happy = PieChartDataEntry(value: 0)
+    var sad = PieChartDataEntry(value: 0)
+    var pieChartEntries = [PieChartDataEntry] ()
     
     var user: MirrorUser!
     
@@ -40,13 +51,36 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         self.calendar.accessibilityIdentifier = "calendar"
         
         
+        if let tv = user.happySadDictionary[formatter.string(from: Date())] {
+            todaysValues = tv
+            happy.value = tv[0]
+            sad.value = tv[1]
+        }
         
+        happy.label = "Happy"
+        sad.label = "Sad"
+        pieChart.entryLabelColor = armyGreenColor
+        pieChart.entryLabelFont = UIFont(name: "Cormorant-Bold", size: CGFloat(12.0))
+        pieChartEntries = [happy, sad]
+        pieChart.holeColor = pieChart.backgroundColor
+        updatePieChart()
     }
     
-    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    func updatePieChart() {
+        let chartDataSet = PieChartDataSet(values: pieChartEntries, label: nil)
+        let chartData = PieChartData(dataSet: chartDataSet)
+        let colors = [blueColor, redColor   ]
+        chartDataSet.colors = colors
+        chartDataSet.valueFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0)) ?? UIFont.systemFont(ofSize: CGFloat(12.0))
+        
+        
+        pieChart.entryLabelFont = UIFont(name: "Cormorant-Regular", size: CGFloat(12.0))
+        chartData.setValueFont(UIFont(name: "Cormorant-Regular", size: CGFloat(12.0)) ?? UIFont.systemFont(ofSize: CGFloat(12.0)))
+        pieChart.accessibilityElementsHidden = true
+        
+        
+        pieChart.data = chartData
     }
-    
      // MARK:- FSCalendarDataSource
 
 //    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
@@ -67,7 +101,12 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
 //        let day: Int! = self.gregorian.component(.day, from: date)
 //        return day % 5 == 0 ? day/5 : 0;
-        return 2
+        if let _ = user.happySadDictionary[formatter.string(from: date)] {
+            return 1
+        } else {
+            return 0
+        }
+//        return 2
     }
     
     func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
@@ -86,6 +125,13 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         print("calendar did select date \(self.formatter.string(from: date))")
         if monthPosition == .previous || monthPosition == .next {
             calendar.setCurrentPage(date, animated: true)
+        }
+        
+        if let tv = user.happySadDictionary[formatter.string(from: date)] {
+            print("Values found: \(tv[0]) and \(tv[1])")
+            happy.value = tv[0]
+            sad.value = tv[1]
+            updatePieChart()
         }
     }
     

@@ -355,7 +355,7 @@
                                     <barButtonItem title="CALENDAR" image="Calendar Image" id="RpV-it-kSc">
                                         <color key="tintColor" red="0.27450980390000002" green="0.20000000000000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="4mJ-3f-2yI" kind="show" id="FCv-fu-inu"/>
+                                            <segue destination="4mJ-3f-2yI" kind="show" identifier="ToCalendar" id="FCv-fu-inu"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SZ4-7V-eqR"/>
@@ -538,7 +538,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-db-Iy2" customClass="FSCalendar">
-                                <rect key="frame" x="16" y="40" width="345" height="317"/>
+                                <rect key="frame" x="16" y="0.0" width="345" height="317"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
@@ -599,14 +599,22 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showsScopeHandle" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tm-hk-sqX" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="317" width="343" height="242"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92156862750000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iqp-Oe-cMu" firstAttribute="trailing" secondItem="xBp-db-Iy2" secondAttribute="trailing" constant="14" id="4un-Cm-4y4"/>
-                            <constraint firstItem="xBp-db-Iy2" firstAttribute="top" secondItem="iqp-Oe-cMu" secondAttribute="top" constant="40" id="DHC-3Q-u5T"/>
+                            <constraint firstItem="xBp-db-Iy2" firstAttribute="top" secondItem="iqp-Oe-cMu" secondAttribute="top" id="DHC-3Q-u5T"/>
+                            <constraint firstItem="1tm-hk-sqX" firstAttribute="bottom" secondItem="iqp-Oe-cMu" secondAttribute="bottom" id="M7y-LL-Guv"/>
                             <constraint firstItem="xBp-db-Iy2" firstAttribute="leading" secondItem="iqp-Oe-cMu" secondAttribute="leading" constant="16" id="Qwi-g7-5xT"/>
-                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="bottom" secondItem="xBp-db-Iy2" secondAttribute="bottom" constant="202" id="huX-lG-nkF"/>
+                            <constraint firstItem="1tm-hk-sqX" firstAttribute="top" secondItem="xBp-db-Iy2" secondAttribute="bottom" id="h9x-Gf-olG"/>
+                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="trailing" secondItem="1tm-hk-sqX" secondAttribute="trailing" constant="16" id="hcc-Wv-NK4"/>
+                            <constraint firstItem="iqp-Oe-cMu" firstAttribute="bottom" secondItem="xBp-db-Iy2" secondAttribute="bottom" constant="242" id="huX-lG-nkF"/>
+                            <constraint firstItem="1tm-hk-sqX" firstAttribute="leading" secondItem="iqp-Oe-cMu" secondAttribute="leading" constant="16" id="jnG-wz-C0Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iqp-Oe-cMu"/>
                     </view>
@@ -642,6 +650,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendar" destination="xBp-db-Iy2" id="wOq-uD-TOe"/>
+                        <outlet property="pieChart" destination="1tm-hk-sqX" id="2MH-iY-9AV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNj-sI-t18" userLabel="First Responder" sceneMemberID="firstResponder"/>
